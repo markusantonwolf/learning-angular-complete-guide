@@ -1,20 +1,37 @@
 <div class="container p-8">
-    <h1 class="mb-4 text-4xl font-normal leading-tight">{{ title }}</h1>
-    <p class="mb-4 text-lg">
-        Hello Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-        maiores ratione iste possimus quae suscipit, minus reprehenderit
-        numquam, dolor ad quisquam eius, corporis nemo assumenda dignissimos
-        esse aperiam ullam odit! Id magnam architecto ipsam repudiandae
-        delectus. Architecto soluta quidem numquam nostrum dignissimos dolores
-        officia alias delectus iusto. Libero delectus doloribus dolores pariatur
-        aspernatur aperiam, quam tempore, omnis, ex aut natus temporibus rerum
-        exercitationem laborum saepe! Placeat hic dolore nesciunt eligendi
-        repellat tenetur, fugiat voluptatem doloremque esse praesentium
-        obcaecati libero alias odit. Natus unde quasi est harum libero sapiente
-        necessitatibus aperiam, earum illo optio sit officiis reprehenderit
-        magnam magni in cum.
-    </p>
-    <input type="text" name="" id="" [(ngModel)]="title" />
-    <app-server></app-server>
-    <app-servers></app-servers>
+    <ol class="mb-4">
+        <li>
+            Add a Input field which updates a property ('username') via
+            Two-Way-Binding
+        </li>
+        <li>
+            Output the username property via String Interpolation (in a
+            paragraph below the input)
+        </li>
+        <li>
+            Add a button which may only be clicked if the username is NOT an
+            empty string
+        </li>
+        <li>
+            Upon clicking the button, the username should be reset to an empty
+            string
+        </li>
+    </ol>
+    <div class="flex flex-col items-start justify-start space-y-4">
+        <input
+            type="text"
+            [(ngModel)]="username"
+            placeholder="Enter username"
+            class="rounded-md border border-slate-400 px-4 py-3 leading-tight"
+        />
+        <button
+            type="button"
+            [disabled]="username.length <= 0"
+            (click)="onClick()"
+            class="rounded-md bg-red-500 px-4 py-2 font-bold leading-tight text-white disabled:bg-red-500/50"
+        >
+            Click
+        </button>
+    </div>
+    <p>Out put of username: {{ username }}</p>
 </div>

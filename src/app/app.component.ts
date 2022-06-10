@@ -1,10 +1,22 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Learing Angular in a 35 hours course';
+    username: String = '';
+
+    onClick() {
+        if (this.username.length <= 0) {
+            console.info('no click');
+        } else {
+            this.username = '';
+        }
+    }
+
+    isClickable() {
+        return this.username.length <= 0 ? false : true;
+    }
 }

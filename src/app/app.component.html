@@ -17,4 +17,7 @@
     <input type="text" name="" id="" [(ngModel)]="title" />
     <app-server></app-server>
     <app-servers></app-servers>
+    <p class="mt-4 border border-dashed border-gray-300 p-8 rounded-md" *ngIf="title.length >= 1">
+        Ein Beispieltext: {{ title }}
+    </p>
 </div>

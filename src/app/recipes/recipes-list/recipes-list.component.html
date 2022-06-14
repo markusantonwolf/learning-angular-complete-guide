@@ -12,6 +12,6 @@
 <div class="flex max-w-xl flex-col gap-y-4">
     <app-recipes-item
         *ngFor="let item of recipes"
-        [item]="item"
+        [item]="item" (selectedRecipe)="selectedRecipe(item)"
     ></app-recipes-item>
 </div>

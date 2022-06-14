@@ -1,4 +1,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-    <app-recipes-list></app-recipes-list>
-    <app-recipes-detail></app-recipes-detail>
+    <app-recipes-list (selectedRecipeItem)="selectedRecipeItem($event)"></app-recipes-list>
+    <app-recipes-detail [details]="recipeDetails" *ngIf="recipeDetails; else elseBlock"></app-recipes-detail>
+    <ng-template #elseBlock>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ad voluptates, tempore eos corporis hic doloribus excepturi provident suscipit quo!
+    </ng-template>
 </div>

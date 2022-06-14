@@ -1,6 +1,7 @@
 <div>
-    <h2>Recipes Details</h2>
+    <h2>{{ details.name }}</h2>
     <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi aliquam hic distinctio cum quam dolor dignissimos molestiae enim aspernatur mollitia quae quaerat cumque voluptatum corrupti porro repellat, dolores excepturi id sint, dicta sunt ea et quos doloremque. Facere, quaerat corporis ratione dicta dolor deserunt nesciunt quia quas ducimus alias perspiciatis debitis ullam dignissimos impedit eligendi nihil. Recusandae, est porro unde dicta voluptate autem repellat ut qui! Neque architecto, illo iure nesciunt asperiores, expedita fugit ad fugiat tempora sed ipsam voluptate nihil inventore nobis recusandae rerum! Minima ut enim dolorem! Accusantium doloribus tempora dolorum error inventore rerum quibusdam dignissimos sequi commodi?
+        {{ details.description }}
     </p>
+    <img [src]="details.imagePath" alt="">
 </div>

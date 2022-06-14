@@ -11,6 +11,7 @@ import { RecipesDetailComponent } from './recipes/recipes-detail/recipes-detail.
 import { RecipesItemComponent } from './recipes/recipes-item/recipes-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { ButtonComponent } from './button/button.component';
 
 const appRoutes: Routes = [
     { path: 'shopping-list', component: ShoppingListComponent },
@@ -27,13 +28,14 @@ const appRoutes: Routes = [
         RecipesItemComponent,
         ShoppingListComponent,
         ShoppingEditComponent,
+        ButtonComponent,
     ],
     imports: [
         BrowserModule,
         FormsModule,
         RouterModule.forRoot(
             appRoutes,
-            { enableTracing: true } // <-- debugging purposes only
+            { enableTracing: false } // <-- debugging purposes only
         ),
     ],
     providers: [],

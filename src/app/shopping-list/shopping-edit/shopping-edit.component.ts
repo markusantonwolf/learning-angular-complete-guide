@@ -6,11 +6,13 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class ShoppingEditComponent implements OnInit {
 
-    @ViewChild('testInput') testInputValue: ElementRef
+    @ViewChild('testInput', { static: true}) testInputValue: ElementRef
 
     constructor() {}
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        console.log('init', this.testInputValue)
+    }
 
     onClick() {
         console.log(this.testInputValue.nativeElement.value)

@@ -1,0 +1,17 @@
+<div
+    class="mb-4 flex max-w-xl items-center justify-between border-b border-dashed border-slate-600"
+>
+    <h2 class="text-4xl font-bold">Recipes List</h2>
+    <button
+        type="button"
+        class="text-md my-8 rounded-md border border-teal-700 bg-teal-800 px-4 py-1 font-semibold uppercase leading-tight text-white"
+    >
+        New Recipe
+    </button>
+</div>
+<div class="flex max-w-xl flex-col gap-y-4">
+    <app-recipes-item
+        *ngFor="let item of recipes"
+        [item]="item"
+    ></app-recipes-item>
+</div>

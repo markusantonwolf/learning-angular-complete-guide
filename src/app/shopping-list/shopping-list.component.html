@@ -1,0 +1,18 @@
+<div
+    class="grid grid-cols-1 gap-8 mx-auto"
+    [class]="{ 'lg:grid-cols-2': show, 'max-w-lg': !show }"
+>
+    <div class="flex flex-col gap-4">
+        <button
+            (click)="toggleShow(item)"
+            *ngFor="let item of ingredients"
+            class="flex items-center justify-between rounded-md border border-dashed border-slate-300 p-2"
+        >
+            <span>
+                {{ item.name }}
+            </span>
+            <span> ({{ item.amount }}) </span>
+        </button>
+    </div>
+    <app-shopping-edit *ngIf="show"></app-shopping-edit>
+</div>

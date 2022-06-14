@@ -4,7 +4,13 @@ module.exports = {
         container: {
             center: true,
         },
+        fontFamiliy: {
+            sans: ["Raleway", "ui-sans-serif", "system-ui", "sans-serif"],
+        },
         extend: {},
     },
-    plugins: [],
+    variants: {
+        lineClamp: ["responsive", "hover"],
+    },
+    plugins: [require("@tailwindcss/line-clamp")],
 };

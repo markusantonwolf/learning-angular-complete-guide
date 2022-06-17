@@ -1,5 +1,13 @@
-<div>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam tempora delectus perferendis provident nulla odio modi dolor nam nemo aspernatur!
+<div class="mx-auto flex max-w-3xl flex-col items-center space-y-8">
+    <button type="button" (click)="toogleStyle()">Click</button>
+    <div>
+        <p *ngIf="style">TRUE</p>
+        <p *ngIf="!style">FALSE</p>
+    </div>
+    <p class="text-xl leading-relaxed" [ngClass]="{ 'text-2xl': style }" [ngStyle]="{ backgroundColor: style ? '#ff00ff' : '#ffff00'}">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam tempora
+        delectus perferendis provident nulla odio modi dolor nam nemo
+        aspernatur!
     </p>
+    <p appHighlight>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum magnam voluptates itaque? Quidem amet vitae vero quia nemo quisquam, dolore culpa impedit dolor quis quas. A deserunt vero labore debitis architecto, ut laborum non quaerat culpa, dolor error illo amet sapiente aspernatur vel quia fugiat dolore voluptates blanditiis? Blanditiis voluptates, assumenda laborum fugit expedita dolorum sequi dignissimos eaque beatae totam. Perferendis excepturi pariatur nemo deserunt doloremque laboriosam a labore ratione corrupti vero saepe necessitatibus aliquid reiciendis eligendi praesentium incidunt ut asperiores rerum nihil, placeat odio voluptatibus! Dolores, quidem voluptatem provident illum officiis veniam esse autem aperiam id veritatis repudiandae accusamus eos ex ipsum. Totam, nam omnis ipsa optio placeat quos ut modi repudiandae a temporibus inventore odit necessitatibus. Nam ipsum, expedita numquam cumque nostrum facere blanditiis asperiores voluptatum quaerat. Numquam laboriosam veniam doloribus harum adipisci sunt illum facere, consectetur saepe vero rem impedit obcaecati earum, modi, nisi maiores nulla voluptatibus atque. Blanditiis natus, mollitia molestias tempore aliquid sint vero similique explicabo facilis ipsam quasi voluptates adipisci eos cupiditate odit quis placeat vel nostrum amet qui ex vitae. Ducimus beatae dolor doloremque nostrum nobis ipsam esse cumque repellendus repellat consequuntur impedit quis, animi, nisi eos eius magnam voluptatum minima iusto explicabo.</p>
 </div>

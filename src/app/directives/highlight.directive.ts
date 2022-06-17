@@ -1,6 +1,7 @@
 import {
     Directive,
     ElementRef,
+    HostBinding,
     HostListener,
     OnInit,
     Renderer2,
@@ -12,27 +13,15 @@ import {
 export class HighlightDirective implements OnInit {
     constructor(private element: ElementRef, private renderer: Renderer2) {}
 
-    ngOnInit() {
-        this.renderer.setStyle(
-            this.element.nativeElement,
-            'background-color',
-            'gray'
-        );
-        // this.element.nativeElement.style.backgroundColor = '#ff00ff';
-    }
+    @HostBinding('style.backgroundColor') color: string = 'transparent';
+
+    ngOnInit() {}
 
     @HostListener('mouseenter') mouseHover(e: Event) {
-        this.renderer.setStyle(
-            this.element.nativeElement,
-            'background-color',
-            'green'
-        );
+        this.color = 'green';
     }
     @HostListener('mouseleave') mouseOut(e: Event) {
-        this.renderer.setStyle(
-            this.element.nativeElement,
-            'background-color',
-            'white'
-        );
+        this.color = 'transparent';
+        console.info('event', e);
     }
 }

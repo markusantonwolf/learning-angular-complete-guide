@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
     style: boolean = false;
+    switchValue: number = 10;
     constructor() {}
 
     ngOnInit(): void {}
 
     toogleStyle() {
-      this.style = !this.style
+        this.style = !this.style;
     }
 }

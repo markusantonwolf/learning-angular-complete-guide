@@ -11,4 +11,8 @@
     .flex-center {
         @apply flex items-center justify-center;
     }
+
+    .open:first-child {
+        @apply flex;
+    }
 }

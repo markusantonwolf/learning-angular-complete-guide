@@ -1,7 +1,7 @@
-<div class="mb-8 shadow-lg p-4 lg:p-2">
+<div class="mb-8 p-4 shadow-lg lg:p-2">
     <div class="container flex items-center justify-between py-4">
         <a routerLink="/" class="text-5xl font-thin">Recipe Book</a>
-        <ul class="flex-center uppercase font-bold gap-4">
+        <ul class="flex-center gap-4 font-bold uppercase">
             <li>
                 <a
                     routerLink="/recipes"
@@ -17,8 +17,24 @@
                 >
             </li>
         </ul>
-        <ul>
-            <li><a href="#">Dropdown</a></li>
-        </ul>
+        <div class="relative flex-col">
+            <button
+                type="button"
+                class="relative rounded-lg bg-teal-700 px-6 py-2 font-bold leading-tight text-white"
+                (click)="toggleDropdown()"
+            >
+                Dropdown
+            </button>
+            <ul
+                class="absolute flex flex-col space-y-4 rounded-lg bg-white border border-teal-700 p-4"
+                *ngIf="isOpen"
+            >
+                <li><a href="#">Punkt 1</a></li>
+                <li><a href="#">Punkt 2</a></li>
+                <li><a href="#">Punkt 3</a></li>
+                <li><a href="#">Punkt 4</a></li>
+                <li><a href="#">Punkt 5</a></li>
+            </ul>
+        </div>
     </div>
 </div>

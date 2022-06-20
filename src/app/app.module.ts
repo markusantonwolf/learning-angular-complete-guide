@@ -14,6 +14,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { ButtonComponent } from './button/button.component';
 import { HomeComponent } from './home/home.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
         ButtonComponent,
         HomeComponent,
         HighlightDirective,
+        UnlessDirective,
     ],
     imports: [
         BrowserModule,

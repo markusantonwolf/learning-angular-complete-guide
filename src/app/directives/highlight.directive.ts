@@ -3,6 +3,7 @@ import {
     ElementRef,
     HostBinding,
     HostListener,
+    Input,
     OnInit,
     Renderer2,
 } from '@angular/core';
@@ -11,17 +12,21 @@ import {
     selector: '[appHighlight]',
 })
 export class HighlightDirective implements OnInit {
+    @Input() defaultColor: string = 'transparent';
+    @Input('appHighlight') highlightColor: string = '#00ff00';
     constructor(private element: ElementRef, private renderer: Renderer2) {}
 
     @HostBinding('style.backgroundColor') color: string = 'transparent';
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.color = this.defaultColor;
+    }
 
     @HostListener('mouseenter') mouseHover(e: Event) {
-        this.color = 'green';
+        this.color = this.highlightColor;
     }
     @HostListener('mouseleave') mouseOut(e: Event) {
-        this.color = 'transparent';
-        console.info('event', e);
+        this.color = this.defaultColor;
+        // console.info('event', e);
     }
 }
